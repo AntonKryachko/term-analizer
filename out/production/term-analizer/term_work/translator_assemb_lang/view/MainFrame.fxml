@@ -29,7 +29,7 @@
                         <Insets top="2.0" />
                      </opaqueInsets>
                   </Separator>
-                  <Button mnemonicParsing="false" text="About" />
+                  <Button mnemonicParsing="false" onAction="#handleAbout" text="About" />
                </children>
                <VBox.margin>
                   <Insets />

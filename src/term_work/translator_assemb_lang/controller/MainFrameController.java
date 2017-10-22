@@ -8,6 +8,10 @@ public class MainFrameController {
     public void setMain(Main main){
         this.main = main;
     }
+    @FXML
+    private void handleAbout(){
+        main.showAboutAuthor();
+    }
     public MainFrameController(){}
     @FXML
     public void initialize(){}

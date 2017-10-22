@@ -9,6 +9,14 @@ public class RootLayerController {
     public void setMain(Main main){
         this.main = main;
     }
+    @FXML
+    private void handleAbout(){
+        main.showAboutAuthor();
+    }
+    @FXML
+    private void handleClose() {
+        main.getPrimaryStage().close();
+    }
     public RootLayerController(){}
     @FXML
     public void initialize(){}
