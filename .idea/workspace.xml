@@ -2,28 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/CompilingFrameController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/FlagsFrameController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/CompileTextSingleton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/view/CompilingFrame.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/view/FlagsFrame.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/sample.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/sample.fxml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/Main.class" afterPath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/controller/AboutLayerController.class" afterPath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/controller/AboutLayerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/controller/MainFrameController.class" afterPath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/controller/MainFrameController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/controller/RootLayerController.class" afterPath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/controller/RootLayerController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/res/text_exmpl/my11.asm" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/model/text_exmpl/my.asm" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/model/text_exmpl/my1.asm" afterPath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/model/res/text_exmpl/my1.asm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/model/CompileTextSingleton.class" afterPath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/model/CompileTextSingleton.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/view/AboutLayer.fxml" afterPath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/view/AboutLayer.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/view/MainFrame.fxml" afterPath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/view/MainFrame.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/view/RootLayer.fxml" afterPath="$PROJECT_DIR$/out/production/term-analizer/term_work/translator_assemb_lang/view/RootLayer.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/Main.java" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/AboutLayerController.java" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/AboutLayerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/MainFrameController.java" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/MainFrameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/RootLayerController.java" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/RootLayerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/view/AboutLayer.fxml" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/view/AboutLayer.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/view/MainFrame.fxml" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/view/MainFrame.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/view/RootLayer.fxml" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/view/RootLayer.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/CompileTextSingleton.java" afterPath="$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/CompileTextSingleton.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,37 +65,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/Main.java">
+      <file leaf-file-name="CompileTextSingleton.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/CompileTextSingleton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="455">
+              <caret line="55" column="72" lean-forward="false" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#initRootLayer#0;class#Main#0" expanded="false" />
-                <element signature="method#showMainFrame#0;class#Main#0" expanded="false" />
-                <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RootLayerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/RootLayerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-              <folding>
-                <element signature="e#371#372#0" expanded="true" />
-                <element signature="e#412#413#0" expanded="true" />
-                <element signature="e#453#454#0" expanded="true" />
-                <element signature="e#495#496#0" expanded="true" />
-                <element signature="e#536#537#0" expanded="true" />
-                <element signature="e#578#579#0" expanded="true" />
-                <element signature="e#621#622#0" expanded="true" />
-                <element signature="e#666#667#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
-                <element signature="e#755#756#0" expanded="true" />
+                <element signature="method#getInstance#0;class#CompileTextSingleton#0" expanded="false" />
+                <element signature="method#deleteEmptyElements#0;class#CompileTextSingleton#0" expanded="false" />
+                <element signature="method#createStringList#0;class#CompileTextSingleton#0" expanded="false" />
+                <element signature="method#retListWithoutComments#0;class#CompileTextSingleton#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -120,89 +84,11 @@
       <file leaf-file-name="MainFrameController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/MainFrameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1090#1091#0" expanded="true" />
-                <element signature="e#1157#1158#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompileTextSingleton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/CompileTextSingleton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getInstance#0;class#CompileTextSingleton#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompilingFrame.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/view/CompilingFrame.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="95" lean-forward="false" selection-start-line="10" selection-start-column="95" selection-end-line="10" selection-end-column="95" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompilingFrameController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/CompilingFrameController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AboutLayerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/AboutLayerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="-4">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainFrame.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/view/MainFrame.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="22" column="74" lean-forward="false" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="74" />
-              <folding>
-                <marker date="1508753864146" expanded="true" signature="2181:2194" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AboutLayer.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/view/AboutLayer.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -246,8 +132,10 @@
         <option value="/usr/lib/jvm/java-9-oracle/lib/src.zip!/java.base/java/util/List.java" />
         <option value="$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/MainFrameController.java" />
         <option value="/usr/lib/jvm/java-9-oracle/lib/src.zip!/java.base/java/lang/String.java" />
-        <option value="$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/CompileTextSingleton.java" />
         <option value="$PROJECT_DIR$/src/term_work/translator_assemb_lang/Main.java" />
+        <option value="$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/res/text_exmpl/my11.asm" />
+        <option value="$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/res/text_exmpl/my1.asm" />
+        <option value="$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/CompileTextSingleton.java" />
       </list>
     </option>
   </component>
@@ -324,6 +212,23 @@
               <item name="term-analizer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="translator_assemb_lang" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="term-analizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="term-analizer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="translator_assemb_lang" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="text_exmpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="term-analizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="term-analizer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="translator_assemb_lang" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -348,6 +253,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/res/text_exmpl" />
       <recent name="$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/res/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -535,7 +441,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28257000" />
+    <option name="totallyTimeSpent" value="34053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="46" y="-4" width="1321" height="773" extended-state="6" />
@@ -549,7 +455,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32659408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6687403" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -577,6 +483,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.asm" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -809,16 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-9-oracle/lib/src.zip!/java.base/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="1027" column="4" lean-forward="true" selection-start-line="1027" selection-start-column="4" selection-end-line="1027" selection-end-column="4" />
-          <folding>
-            <element signature="e#44152#44180#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-9-oracle/lib/src.zip!/java.base/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -828,14 +727,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/text_exmpl/my.asm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/res/text_exmpl/my1.asm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -854,21 +745,9 @@
     <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/AboutLayerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/MainFrameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="e#1157#1158#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -892,17 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/CompileTextSingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getInstance#0;class#CompileTextSingleton#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/view/CompilingFrame.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -922,7 +790,7 @@
         <state relative-caret-position="203">
           <caret line="22" column="74" lean-forward="false" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="74" />
           <folding>
-            <marker date="1508753864146" expanded="true" signature="2181:2194" ph="..." />
+            <marker date="1508775201750" expanded="true" signature="2181:2194" ph="..." />
           </folding>
         </state>
       </provider>
@@ -930,12 +798,60 @@
     <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initRootLayer#0;class#Main#0" expanded="false" />
             <element signature="method#showMainFrame#0;class#Main#0" expanded="false" />
             <element signature="method#showAboutAuthor#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-9-oracle/lib/src.zip!/java.base/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="403" column="17" lean-forward="false" selection-start-line="403" selection-start-column="17" selection-end-line="403" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/res/text_exmpl/my11.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/res/text_exmpl/my1.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="81" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/controller/MainFrameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/term_work/translator_assemb_lang/model/CompileTextSingleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="55" column="72" lean-forward="false" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getInstance#0;class#CompileTextSingleton#0" expanded="false" />
+            <element signature="method#deleteEmptyElements#0;class#CompileTextSingleton#0" expanded="false" />
+            <element signature="method#createStringList#0;class#CompileTextSingleton#0" expanded="false" />
+            <element signature="method#retListWithoutComments#0;class#CompileTextSingleton#0" expanded="false" />
           </folding>
         </state>
       </provider>
