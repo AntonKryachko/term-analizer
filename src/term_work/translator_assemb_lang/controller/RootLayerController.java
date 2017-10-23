@@ -14,6 +14,26 @@ public class RootLayerController {
         main.showAboutAuthor();
     }
     @FXML
+    private void handleNew(){
+        System.out.println("new");
+    }
+    @FXML
+    private void handleOpen(){
+        System.out.println("Open");
+    }
+    @FXML
+    private void handleSave(){
+        System.out.println("Save");
+    }
+    @FXML
+    private void handleSaveAs(){
+        System.out.println("Save as");
+    }
+    @FXML
+    private void handleCompile(){
+        System.out.println("Compile");
+    }
+    @FXML
     private void handleClose() {
         main.getPrimaryStage().close();
     }

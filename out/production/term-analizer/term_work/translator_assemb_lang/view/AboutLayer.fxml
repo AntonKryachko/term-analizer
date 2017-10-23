@@ -13,7 +13,7 @@
         <Label alignment="CENTER" layoutX="221.0" layoutY="65.0" prefHeight="17.0" prefWidth="200.0" text="направление 09.03.01" />
         <Label alignment="CENTER" layoutX="221.0" layoutY="81.0" prefHeight="21.0" prefWidth="212.0" text="Крячко Антон Владимирович" />
         <Button defaultButton="true" layoutX="344.0" layoutY="144.0" mnemonicParsing="false" onAction="#handleClose" text="Close" />
-      <ImageView fx:id="image_au" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="image_au" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
     </children>
 
 </AnchorPane>

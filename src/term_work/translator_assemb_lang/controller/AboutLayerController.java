@@ -5,10 +5,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.IOException;
-
-
 public class AboutLayerController {
     @FXML
     private ImageView image_au;
