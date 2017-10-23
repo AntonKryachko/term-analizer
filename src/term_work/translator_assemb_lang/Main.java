@@ -38,7 +38,7 @@ public class Main extends Application {
         showMainFrame();
     }
 
-    public void initRootLayer(){
+    private void initRootLayer(){
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("view/RootLayer.fxml"));
