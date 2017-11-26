@@ -45,20 +45,24 @@ ns segment
     ;===============================
     ;реализация AND        
     
-    add ax, bx  ; AND P, P
-    
-    add bx, 5   ; AND P, НО
-    add ax, 5
-    
-    add ax, [bx + si]  ; add P, ОП 
-    add bx, [bx + di]
-    add dx, [bp + si]
-    add cx, [bp + di]
-    
-    add [bx + si], ax  ; add ОП,P
-    add [bx + di], bx
-    add [bp + si], cx
-    add [bp + di], dx   
+    mov ax, bx   ;MOV P, P
+    mov al, bl
+    mov bl, al
+    mov dh, bh
+
+    mov bx, 5    ;MOV P, HO
+    mov bh, 5
+    mov ax, 5
+    mov al, 5
+
+    mov ax, [bx + si]  ; MOV P, ОП
+    mov ah, [bx + si]
+    mov bx, [bx + di]
+    mov bh, [bx + di]
+    mov dx, [bp + si]
+    mov dl, [bp + si]
+    mov cx, [bp + di]
+    mov cl, [bp + di]
                   
     xor ax,ax
     xor bx,bx

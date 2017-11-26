@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import term_work.translator_assemb_lang.Main;
 import term_work.translator_assemb_lang.model.CompileTextSingleton;
+import term_work.translator_assemb_lang.model.CreateObjectiveCodeSingleton;
 
 
 public class MainFrameController {
@@ -11,6 +12,7 @@ public class MainFrameController {
     private TextArea compile_text;
     private Main main;
     private CompileTextSingleton text = CompileTextSingleton.getInstance();
+    private CreateObjectiveCodeSingleton code = CreateObjectiveCodeSingleton.getInstance();
 
     public void setMain(Main main){
         this.main = main;
@@ -28,6 +30,7 @@ public class MainFrameController {
         System.out.println("Compile");
         trimCompile_text();
         text.setCompileText(compile_text.getText());
+        code.perfWithMnemlines();
     }
     @FXML
     private void handleSave(){
