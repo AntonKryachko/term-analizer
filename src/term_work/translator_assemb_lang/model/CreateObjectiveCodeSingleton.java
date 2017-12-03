@@ -9,6 +9,7 @@ import term_work.translator_assemb_lang.Main;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.List;
+import java.util.Objects;
 
 public class CreateObjectiveCodeSingleton{
 
@@ -25,25 +26,29 @@ public class CreateObjectiveCodeSingleton{
     private CompileTextSingleton compileTextSingleton = CompileTextSingleton.getInstance();
     private ObservableList<Result> results = FXCollections.observableArrayList();
     private List<LineWithMnem> lineWithMnems = compileTextSingleton.getLineWithMnems();
+    private String shift;
+    private int i;
 
     public void perfWithMnemlines(){
-        for (LineWithMnem lineWithMnem: lineWithMnems){
-            formObjCode(lineWithMnem);
+        for (LineWithMnem line : lineWithMnems) {
+            formObjCode(line);
         }
+        i = 0;
     }
     private void formObjCode(LineWithMnem line){
         String operator = line.getOperator();
         String operand_1 = line.getOperand1();
         String operand_2 = line.getOperand2();
         StringBuilder sb = new StringBuilder();
-        String address = "";
+
         String objCode = "";
         try{
             objCode = Store.binToHex(getOperandsObjCode(operator,operand_1, operand_2));
-
         }catch (Exception e){
             e.printStackTrace();
         }
+        String address = "07" + (Integer.parseInt(shift) + i);
+        i += objCode.length() / 2;
         String code;
         if(!operand_2.equalsIgnoreCase("")){
             code = sb.append(operator).append(" ").append(operand_1).append(", ").append(operand_2).toString();
@@ -86,7 +91,7 @@ public class CreateObjectiveCodeSingleton{
             }else {
                 try{
                     RM = opd1mod11.substring(1);
-                    String str = String.format("%s", Integer.toHexString( 0x10000 |Integer.parseInt(operand_2)).substring(1));
+                    String str = String.format("%s", Integer.toHexString( 0x10000 | Integer.parseInt(operand_2)).substring(1));
                     if(W1.equals("1")){
                         DATA_LOW = String.format("%s", Integer.toBinaryString(100000000 | Integer.parseInt(str.substring(2), 16)).substring(1)).substring(18);
                         DATA_HIGH = String.format("%s", Integer.toBinaryString(100000000 | Integer.parseInt(str.substring(0,2), 16)).substring(1)).substring(18);
@@ -117,9 +122,6 @@ public class CreateObjectiveCodeSingleton{
         }else if(W1.equals("")){
             W = W2;
         }else W = W1;
-
-
-
 
         String s = "";
         if(DATA_LOW.equals("")){
@@ -168,17 +170,17 @@ public class CreateObjectiveCodeSingleton{
     }
 
     private String add (
-            String COP,
-            String D,
-            String C,
-            String W,
-            String MOD,
-            String REG,
-            String RM,
-            String DATA_LOW,
-            String DATA_HIGH,
-            String DISP_LOW,
-            String DISP_HIGH
+                String COP,
+                String D,
+                String C,
+                String W,
+                String MOD,
+                String REG,
+                String RM,
+                String DATA_LOW,
+                String DATA_HIGH,
+                String DISP_LOW,
+                String DISP_HIGH
     ){
         StringBuilder sb = new StringBuilder();
         return sb.append(COP)
@@ -251,6 +253,15 @@ public class CreateObjectiveCodeSingleton{
             sb.append(table[x][0]).append(table[0][y]);
         }catch (IndexOutOfBoundsException e){/*NOP*/}
         return sb.toString();
+    }
+
+    public void setShift(String shift) {
+        if(shift == null){
+            this.shift = "0";
+        }else {
+            this.shift = shift.substring(3, shift.length() - 1);;
+        }
+
     }
 }
 

@@ -3,8 +3,14 @@ package term_work.translator_assemb_lang.model;
 public class Test {
     public static void main(String[] args) {
         CompileTextSingleton text = CompileTextSingleton.getInstance();
-        text.setCompileText(someText());
+        text.setCompileText(someText(), true);
+        System.out.println(text.getCompileTextList().toString());
+        System.out.println(text.getListWithoutComments().toString());
+        System.out.println(text.getVariables().toString());
+        System.out.println(text.getMnemonicList().toString());
+        System.out.println(text.getSpecialWords().toString());
         CreateObjectiveCodeSingleton createObjectiveCodeSingleton = CreateObjectiveCodeSingleton.getInstance();
+        createObjectiveCodeSingleton.setShift(Store.getValFromList(text.getSpecialWords(), "ORG"));
         createObjectiveCodeSingleton.perfWithMnemlines();
         createObjectiveCodeSingleton.getResults().forEach(c ->
                 System.out.println(c.getAdress() + " | " + c.getObjectCode() + " | " + c.getProgCode()));

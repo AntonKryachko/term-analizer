@@ -13,8 +13,14 @@ import term_work.translator_assemb_lang.controller.AboutLayerController;
 import term_work.translator_assemb_lang.controller.CompilingFrameController;
 import term_work.translator_assemb_lang.controller.MainFrameController;
 import term_work.translator_assemb_lang.controller.RootLayerController;
+import term_work.translator_assemb_lang.model.CompileTextSingleton;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.prefs.Preferences;
 
 public class Main extends Application {
     private Stage primaryStage;
@@ -49,7 +55,6 @@ public class Main extends Application {
             primaryStage.setScene(scene);
 
             RootLayerController controller = loader.getController();
-            controller.setMain(this);
 
             primaryStage.show();
         }catch (IOException e){
@@ -115,6 +120,25 @@ public class Main extends Application {
             authorStage.showAndWait();
         }catch (IOException e){
             e.printStackTrace();
+        }
+    }
+    public File getFilePath(){
+        Preferences preferences = Preferences.userNodeForPackage(getClass());
+        String filePath = preferences.get(KEY_FILE, null);
+        if(filePath != null){
+            return new File(filePath);
+        }else {
+            return null;
+        }
+    }
+    public void setFilePath(File filePath){
+        Preferences preferences = Preferences.userNodeForPackage(getClass());
+        if(filePath != null) {
+            preferences.put(KEY_FILE, filePath.getPath());
+            primaryStage.setTitle(NAME_APP + " \"" + filePath.getName() + "\"");
+        }else{
+            preferences.remove(KEY_FILE);
+            primaryStage.setTitle(NAME_APP);
         }
     }
 }
