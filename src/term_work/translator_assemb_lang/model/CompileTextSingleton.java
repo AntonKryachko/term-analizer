@@ -1,5 +1,6 @@
 package term_work.translator_assemb_lang.model;
 
+import javafx.stage.Stage;
 import term_work.translator_assemb_lang.Main;
 
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.regex.Pattern;
 
 public class CompileTextSingleton {
     private Main main;
+    private Stage stage;
     private static CompileTextSingleton instance;
     private CompileTextSingleton(){}
     public static CompileTextSingleton getInstance(){
@@ -32,9 +34,11 @@ public class CompileTextSingleton {
     private List<String> specialWords = null;
     private List<String> variables = null;
 
-    public void setCompileText(String compileText) {
+    public void setCompileText(String compileText, boolean startPerform) {
         this.compileText = compileText;
-        startPerformWithCompileText();
+        if(startPerform){
+            startPerformWithCompileText();
+        }
     }
 
     private void startPerformWithCompileText(){
@@ -53,7 +57,6 @@ public class CompileTextSingleton {
         divideList();
         work(mnemonicList);
     }
-
     private void work(List<String> list) {
         Set<Integer> lengthWord = new TreeSet<>();
         for (String s : Store.getMn()) {
@@ -152,12 +155,16 @@ public class CompileTextSingleton {
         Pattern pattern2 = Pattern.compile(Store.getSpecialWordRegExe());
 
         list.forEach(el -> {
-            if(pattern1.matcher(el).find()){
-                mnemonicList.add(el);
-            }else if(pattern2.matcher(el).find()){
-                specialWords.add(el);
+            if(!el.equalsIgnoreCase("END")){
+                if(pattern1.matcher(el).find()){
+                    mnemonicList.add(el);
+                }else if(pattern2.matcher(el).find()){
+                    specialWords.add(el);
+                }else {
+                    variables.add(el);
+                }
             }else {
-                variables.add(el);
+                return;
             }
         });
     }
@@ -181,8 +188,35 @@ public class CompileTextSingleton {
     public List<String> getOutputMnemosLines() {
         return outputMnemosLines;
     }
+    public List<String> getListWithoutComments() {
+        return listWithoutComments;
+    }
+    public List<String> getListWithoutEmptyElementsAndComments() {
+        return listWithoutEmptyElementsAndComments;
+    }
 
+    public List<String> getMnemonicList() {
+        return mnemonicList;
+    }
+    public List<String> getSpecialWords() {
+        return specialWords;
+    }
+    public List<String> getVariables() {
+        return variables;
+    }
     public void setMain() {
         this.main = main;
     }
+    public void clear(){
+        this.compileText = "";
+        this.compileTextList.clear();
+        this.lineWithMnems.clear();
+        this.listWithoutComments.clear();
+        this.listWithoutEmptyElementsAndComments.clear();
+        this.mnemonicList.clear();
+        this.specialWords.clear();
+        this.variables.clear();
+        this.outputMnemosLines.clear();
+    }
+
 }

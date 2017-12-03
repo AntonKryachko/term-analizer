@@ -2,9 +2,18 @@ package term_work.translator_assemb_lang.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
+import javafx.stage.FileChooser;
 import term_work.translator_assemb_lang.Main;
+import term_work.translator_assemb_lang.model.AlertData;
 import term_work.translator_assemb_lang.model.CompileTextSingleton;
 import term_work.translator_assemb_lang.model.CreateObjectiveCodeSingleton;
+import term_work.translator_assemb_lang.model.Store;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 
 public class MainFrameController {
@@ -24,26 +33,88 @@ public class MainFrameController {
     @FXML
     private void handleNew(){
         System.out.println("New");
+        compile_text.clear();
+        main.setFilePath(null);
     }
     @FXML
     private void handleCompile(){
         System.out.println("Compile");
         trimCompile_text();
-        text.setCompileText(compile_text.getText());
-        code.perfWithMnemlines();
-        main.compilingFrame();
+        if(!compile_text.getText().equalsIgnoreCase("")){
+            text.setCompileText(compile_text.getText(),true);
+            code.setShift(Store.getValFromList(text.getSpecialWords(), "ORG"));
+            code.perfWithMnemlines();
+            main.compilingFrame();
+        }else {
+            new AlertData(
+                    main.getPrimaryStage(),
+                    "Введите текст",
+                    "Введите код",
+                    "Тут пусто",
+                    "WARNING"
+            );
+        }
     }
     @FXML
     private void handleSave(){
         System.out.println("Save");
+        File engFile = main.getFilePath();
+        if(engFile != null){
+            save(engFile);
+        }else {
+            handleSaveAs();
+        }
+    }
+    @FXML
+    private void handleSaveAs(){
+        System.out.println("Save as");
+        FileChooser fileChooser = new FileChooser();
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter(
+                "TASM files (*.asm)", "*.asm",
+                "All files", "*.*"
+        );
+        fileChooser.getExtensionFilters().add(extFilter);
+        File file = fileChooser.showSaveDialog(main.getPrimaryStage());
+        if(file != null){
+            if(!file.getPath().endsWith(".asm")){
+                file = new File(file.getPath() + ".asm");
+            }
+            save(file);
+        }
+    }
+    private void save(File file){
+        try{
+            Files.write(Paths.get(file.getPath()),compile_text.getText().getBytes());
+            main.setFilePath(file);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
     @FXML
     private void handleOpen(){
         System.out.println("Open");
+        FileChooser fileChooser = new FileChooser();
+        FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter(
+                "TASM files (*.asm)","*.asm",
+                "All files", "*.*"
+        );
+        fileChooser.getExtensionFilters().add(extensionFilter);
+        File file = fileChooser.showOpenDialog(main.getPrimaryStage());
+        if(file != null){
+            StringBuilder sb = new StringBuilder();
+            try {
+                Files.lines(Paths.get(file.getPath()), Charset.defaultCharset()).forEach(l -> sb.append(l).append("\n"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            compile_text.insertText(0, sb.toString());
+            main.setFilePath(file);
+        }
     }
     public MainFrameController(){}
     @FXML
-    public void initialize(){}
+    public void initialize(){
+    }
 
     private void trimCompile_text(){
         compile_text.setText(compile_text.getText().trim());

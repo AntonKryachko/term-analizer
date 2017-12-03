@@ -1,9 +1,11 @@
 package term_work.translator_assemb_lang.model;
 
-class Store {
+import java.util.List;
+
+public class Store {
 
     private static String[] mn = {"MOV", "ADD", "SAR", "JZ"};
-    private static String[] spec = {"SEGMENT", "ASSUME", "END", "ENDS", "ORG", "INT", "DW", "DB"};
+    private static String[] spec = {"SEGMENT", "ASSUME", "END", "ENDS", "ORG", "INT"};
     private static String[] specWordToVar = {"DW", "DB"};
     private static String[][] mod11 = {
             {" ", "000", "001", "010", "011", "100", "101", "110", "111"},
@@ -80,5 +82,13 @@ class Store {
             sb.append(Integer.toHexString(Integer.parseInt(bin.substring(i, i + 4), 2)));
         }
         return sb.toString();
+    }
+    public static String getValFromList(List<String> list, String val){
+        for (String l: list){
+            if(l.contains(val)){
+                return l;
+            }
+        }
+        return null;
     }
 }
