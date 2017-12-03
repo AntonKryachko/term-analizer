@@ -6,6 +6,8 @@ public class Test {
         text.setCompileText(someText());
         CreateObjectiveCodeSingleton createObjectiveCodeSingleton = CreateObjectiveCodeSingleton.getInstance();
         createObjectiveCodeSingleton.perfWithMnemlines();
+        createObjectiveCodeSingleton.getResults().forEach(c ->
+                System.out.println(c.getAdress() + " | " + c.getObjectCode() + " | " + c.getProgCode()));
     }
 
     private static String someText2(){

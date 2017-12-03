@@ -10,6 +10,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import term_work.translator_assemb_lang.controller.AboutLayerController;
+import term_work.translator_assemb_lang.controller.CompilingFrameController;
 import term_work.translator_assemb_lang.controller.MainFrameController;
 import term_work.translator_assemb_lang.controller.RootLayerController;
 
@@ -65,6 +66,30 @@ public class Main extends Application {
 
             MainFrameController controller = loader.getController();
             controller.setMain(this);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    public void compilingFrame(){
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("view/CompilingFrame.fxml"));
+            AnchorPane pane = loader.load();
+
+            Stage compilingStage = new Stage();
+            compilingStage.setTitle("Result");
+            compilingStage.initModality(Modality.WINDOW_MODAL);
+            compilingStage.initOwner(primaryStage);
+            compilingStage.setResizable(true);
+
+            Scene scene = new Scene(pane);
+            compilingStage.setScene(scene);
+
+            CompilingFrameController controller = loader.getController();
+            controller.setMain(this);
+            controller.setStage(compilingStage);
+
+            compilingStage.showAndWait();
         }catch (IOException e){
             e.printStackTrace();
         }

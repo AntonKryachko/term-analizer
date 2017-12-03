@@ -48,14 +48,14 @@ ns segment
     add dl, [bp] + [si]
     add cx, [bp] + [di]
     add cl, [bp] + [di]
-    add [bx + si], ax
-    add [bx + si], ah
-    add [bx + di], bx
-    add [bx + di], bh
-    add [bp + si], dx
-    add [bp + si], dl
-    add [bp + di], cx
-    add [bp + di], cl
+    add [bx] + [si], ax
+    add [bx] + [si], ah
+    add [bx] + [di], bx
+    add [bx] + [di], bh
+    add [bp] + [si], dx
+    add [bp] + [si], dl
+    add [bp] + [di], cx
+    add [bp] + [di], cl
     xor ax,ax
     xor bx,bx
     xor cx,cx

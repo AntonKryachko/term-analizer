@@ -31,6 +31,7 @@ public class MainFrameController {
         trimCompile_text();
         text.setCompileText(compile_text.getText());
         code.perfWithMnemlines();
+        main.compilingFrame();
     }
     @FXML
     private void handleSave(){

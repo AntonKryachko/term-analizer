@@ -10,16 +10,6 @@ class Store {
             {"0",  "AL",  "CL",  "DL",  "BL",  "AH",  "CH",  "DH", "BH"},
             {"1",  "AX",  "CX",  "DX",  "BX",  "SP",  "BP",  "SI", "DI"}
     };
-    private static String[][] MOV = {
-            {"RnR",  "InRM",    "InR",   "MnRAxL",  "AxLnM",  "RMnSeg",   "SegnRM"},
-            {"100010", "1100011", "1011", "1010000", "1010001", "10001110", "10001100"}
-    };
-    private static String[][] ADD = {
-            {"RnR",   "RAxLpI",  "InRM"},
-            {"000000", "0000010", "100000"}
-    };
-    private static String[] SAR = {"110100"};
-    private static String[] JZ = {"01110100"};
 
     private static String[][] doings = {
             {"MOV", "100010", "1100011", "1011", "101000", "10001110", "10001100"},
@@ -83,16 +73,12 @@ class Store {
     public static String[] getSpecWordToVar() {
         return specWordToVar;
     }
-    public static String[][] getMOV() {
-        return MOV;
-    }
-    public static String[][] getADD() {
-        return ADD;
-    }
-    public static String[] getSAR() {
-        return SAR;
-    }
-    public static String[] getJZ() {
-        return JZ;
+    public static String binToHex(String bin){
+        StringBuilder sb = new StringBuilder();
+        char[] c = bin.toCharArray();
+        for (int i = 0; i < c.length; i+=4) {
+            sb.append(Integer.toHexString(Integer.parseInt(bin.substring(i, i + 4), 2)));
+        }
+        return sb.toString();
     }
 }

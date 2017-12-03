@@ -1,5 +1,7 @@
 package term_work.translator_assemb_lang.model;
 
+import term_work.translator_assemb_lang.Main;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -7,6 +9,7 @@ import java.util.TreeSet;
 import java.util.regex.Pattern;
 
 public class CompileTextSingleton {
+    private Main main;
     private static CompileTextSingleton instance;
     private CompileTextSingleton(){}
     public static CompileTextSingleton getInstance(){
@@ -177,5 +180,9 @@ public class CompileTextSingleton {
     }
     public List<String> getOutputMnemosLines() {
         return outputMnemosLines;
+    }
+
+    public void setMain() {
+        this.main = main;
     }
 }

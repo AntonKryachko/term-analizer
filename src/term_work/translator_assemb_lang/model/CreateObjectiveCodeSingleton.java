@@ -1,6 +1,10 @@
 package term_work.translator_assemb_lang.model;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
 import javafx.scene.paint.Stop;
+import term_work.translator_assemb_lang.Main;
 
 import java.util.ArrayList;
 import java.util.Formatter;
@@ -17,27 +21,37 @@ public class CreateObjectiveCodeSingleton{
         return instance;
     }
 
+    private Main main;
     private CompileTextSingleton compileTextSingleton = CompileTextSingleton.getInstance();
-    private List<String> results = new ArrayList<>();
+    private ObservableList<Result> results = FXCollections.observableArrayList();
     private List<LineWithMnem> lineWithMnems = compileTextSingleton.getLineWithMnems();
 
     public void perfWithMnemlines(){
         for (LineWithMnem lineWithMnem: lineWithMnems){
             formObjCode(lineWithMnem);
-            System.out.println();
         }
-        System.out.println(results.toString());
     }
     private void formObjCode(LineWithMnem line){
         String operator = line.getOperator();
         String operand_1 = line.getOperand1();
         String operand_2 = line.getOperand2();
+        StringBuilder sb = new StringBuilder();
+        String address = "";
+        String objCode = "";
+        try{
+            objCode = Store.binToHex(getOperandsObjCode(operator,operand_1, operand_2));
 
-        System.out.println(operator + " " + operand_1 + ", " + operand_2);
-
-        results.add(getOperandsObjCode(operator,operand_1, operand_2));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        String code;
+        if(!operand_2.equalsIgnoreCase("")){
+            code = sb.append(operator).append(" ").append(operand_1).append(", ").append(operand_2).toString();
+        }else {
+            code = sb.append(operator).append(" ").append(operand_1).toString();
+        }
+        results.add(new Result(address,objCode, code));
     }
-
     private String getOperandsObjCode(String operator, String operand_1, String operand_2){
         String COP = "";
         String W = "";
@@ -150,18 +164,7 @@ public class CreateObjectiveCodeSingleton{
                 default:
             }
         }
-        System.out.println(s);
         return s;
-    }
-
-    public String binToHex(String bin){
-        StringBuilder sb = new StringBuilder();
-        char[] c = bin.toCharArray();
-        for (int i = 0; i < c.length; i+=4) {
-            sb.append(Integer.toHexString(Integer.parseInt(bin.substring(i, i + 4), 2)));
-        }
-        System.out.println(sb.toString());
-        return null;
     }
 
     private String add (
@@ -191,6 +194,10 @@ public class CreateObjectiveCodeSingleton{
                 .append(DISP_HIGH).toString();
     }
 
+    public ObservableList<Result> getResults() {
+        return results;
+    }
+
     private String MOV(int op){
         switch (op){
             case 1: return Store.getDoings()[0][1];
@@ -198,7 +205,7 @@ public class CreateObjectiveCodeSingleton{
             case 3: return Store.getDoings()[0][3];
             case 4: return Store.getDoings()[0][4];
             default:
-                System.out.println("fuck off");
+                System.out.println("ERROR");
         }
         return null;
     }
@@ -208,7 +215,7 @@ public class CreateObjectiveCodeSingleton{
             case 2: return Store.getDoings()[1][2];
             case 3: return Store.getDoings()[1][3];
             default:
-                System.out.println("fuck off");
+                System.out.println("ERROR");
         }
         return null;
     }
@@ -216,7 +223,7 @@ public class CreateObjectiveCodeSingleton{
         switch (op){
             case 1: return Store.getDoings()[2][1];
             default:
-                System.out.println("fuck off");
+                System.out.println("ERROR");
         }
         return null;
     }
@@ -224,7 +231,7 @@ public class CreateObjectiveCodeSingleton{
         switch (op){
             case 1: return Store.getDoings()[3][1];
             default:
-                System.out.println("fuck off");
+                System.out.println("ERROR");
         }
         return null;
     }

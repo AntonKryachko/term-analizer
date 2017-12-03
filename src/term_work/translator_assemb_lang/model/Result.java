@@ -1,96 +1,60 @@
 package term_work.translator_assemb_lang.model;
 
-public class Result {
-    private String generalCode;
-    private String COP;
-    private String W;
-    private String D;
-    private String REG;
-    private String MOD;
-    private String RM;
-    private String DATA_LOW;
-    private String DATA_HIGH;
-    private String DISP_LOW;
-    private String DISP_HIGH;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
-    public String getW() {
-        return W;
+public class Result {
+    private StringProperty adress;
+    private StringProperty objectCode;
+    private StringProperty progCode;
+
+    public String getAdress() {
+        return adress.get();
     }
-    public void setW(String w) {
-        W = w;
+    public StringProperty adressProperty() {
+        return adress;
     }
-    public String getD() {
-        return D;
+    public String getObjectCode() {
+        return objectCode.get();
     }
-    public void setD(String d) {
-        D = d;
+    public StringProperty objectCodeProperty() {
+        return objectCode;
     }
-    public String getDISP_LOW() {
-        return DISP_LOW;
+    public String getProgCode() {
+        return progCode.get();
     }
-    public void setDISP_LOW(String DISP_LOW) {
-        this.DISP_LOW = DISP_LOW;
+    public StringProperty progCodeProperty() {
+        return progCode;
     }
-    public String getDISP_HIGH() {
-        return DISP_HIGH;
+
+    public void setAdress(String adress) {
+        this.adress.set(adress);
     }
-    public void setDISP_HIGH(String DISP_HIGH) {
-        this.DISP_HIGH = DISP_HIGH;
+    public void setObjectCode(String objectCode) {
+        this.objectCode.set(objectCode);
     }
-    public String getGeneralCode() {
-        return generalCode;
+    public void setProgCode(String progCode) {
+        this.progCode.set(progCode);
     }
-//    private void setGeneralCode(){}
-    public String getCOP() {
-        return COP;
+
+    Result(){
+        this.adress = new SimpleStringProperty("");
+        this.objectCode = new SimpleStringProperty("");
+        this.progCode = new SimpleStringProperty("");
     }
-    public void setCOP(String COP) {
-        this.COP = COP;
+
+    Result(String adress, String objectCode,String progCode){
+        this.adress = new SimpleStringProperty(adress);
+        this.objectCode = new SimpleStringProperty(objectCode);
+        this.progCode = new SimpleStringProperty(progCode);
     }
-    public String getREG() {
-        return REG;
-    }
-    public void setREG(String REG) {
-        this.REG = REG;
-    }
-    public String getMOD() {
-        return MOD;
-    }
-    public void setMOD(String MOD) {
-        this.MOD = MOD;
-    }
-    public String getRM() {
-        return RM;
-    }
-    public void setRM(String RM) {
-        this.RM = RM;
-    }
-    public String getDATA_LOW() {
-        return DATA_LOW;
-    }
-    public void setDATA_LOW(String DATA_LOW) {
-        this.DATA_LOW = DATA_LOW;
-    }
-    public String getDATA_HIGH() {
-        return DATA_HIGH;
-    }
-    public void setDATA_HIGH(String DATA_HIGH) {
-        this.DATA_HIGH = DATA_HIGH;
-    }
+
     @Override
     public String toString() {
         return "Result{" +
-                "generalCode='" + generalCode + '\'' +
-                ", COP='" + COP + '\'' +
-                ", W='" + W + '\'' +
-                ", D='" + D + '\'' +
-                ", REG='" + REG + '\'' +
-                ", MOD='" + MOD + '\'' +
-                ", RM='" + RM + '\'' +
-                ", DATA_LOW='" + DATA_LOW + '\'' +
-                ", DATA_HIGH='" + DATA_HIGH + '\'' +
-                ", DISP_LOW='" + DISP_LOW + '\'' +
-                ", DISP_HIGH='" + DISP_HIGH + '\'' +
+                "adress=" + adress +
+                ", objectCode=" + objectCode +
+                ", progCode=" + progCode +
                 '}';
     }
 }
