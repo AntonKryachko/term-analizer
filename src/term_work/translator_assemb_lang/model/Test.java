@@ -20,7 +20,6 @@ public class Test {
         return "ns segment\n" +
                 "    assume cs: ns, ds: ns, ss: ns\n" +
                 "    org 100h\n" +
-                " start:                          \n" +
                 "    ;Легенда:\n" +
                 "    ;Р - регистр\n" +
                 "    ;НО - непосредственный операнд\n" +
@@ -108,7 +107,6 @@ public class Test {
       return  "ns segment\n" +
               "    assume cs: ns, ds: ns, ss: ns\n" +
               "    org 100h\n" +
-              " start:\n" +
               "    mov ax, bx\n" +
               "    mov al, bl\n" +
               "    mov bx, ax\n" +
@@ -134,10 +132,6 @@ public class Test {
               "    mov [bp] + [si], dl\n" +
               "    mov [bp] + [di], cx\n" +
               "    mov [bp] + [di], cl\n" +
-              "    xor ax,ax\n" +
-              "    xor bx,bx\n" +
-              "    xor cx,cx\n" +
-              "    xor dx,dx\n" +
               "    add ax, bx\n" +
               "    add al, bl\n" +
               "    add bx, ax\n" +
@@ -163,11 +157,6 @@ public class Test {
               "    add [bp] + [si], dl\n" +
               "    add [bp] + [di], cx\n" +
               "    add [bp] + [di], cl\n" +
-              "    xor ax,ax\n" +
-              "    xor bx,bx\n" +
-              "    xor cx,cx\n" +
-              "    xor dx,dx\n" +
-              "    mov cl, 2\n" +
               "    sar ax, cl\n" +
               "    sar ax, 2\n" +
               "    jz m1\n" +

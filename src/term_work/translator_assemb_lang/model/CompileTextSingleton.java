@@ -153,20 +153,20 @@ public class CompileTextSingleton {
         List<String> list = new ArrayList<>(retListWithoutSpaces(listWithoutEmptyElementsAndComments));
         Pattern pattern1 = Pattern.compile(Store.getMnemoRegExe());
         Pattern pattern2 = Pattern.compile(Store.getSpecialWordRegExe());
-
-        list.forEach(el -> {
+        Pattern pattern3 = Pattern.compile(Store.getVariablesRegExe());
+        for (String el: list) {
             if(!el.equalsIgnoreCase("END")){
                 if(pattern1.matcher(el).find()){
                     mnemonicList.add(el);
                 }else if(pattern2.matcher(el).find()){
                     specialWords.add(el);
-                }else {
+                }else if(pattern3.matcher(el).find()){
                     variables.add(el);
                 }
             }else {
                 return;
             }
-        });
+        }
     }
     private List<String> retOutMnemLines(){
         List<String> list = new ArrayList<>();

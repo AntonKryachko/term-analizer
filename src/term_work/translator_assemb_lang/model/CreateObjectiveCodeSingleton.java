@@ -26,6 +26,7 @@ public class CreateObjectiveCodeSingleton{
     private CompileTextSingleton compileTextSingleton = CompileTextSingleton.getInstance();
     private ObservableList<Result> results = FXCollections.observableArrayList();
     private List<LineWithMnem> lineWithMnems = compileTextSingleton.getLineWithMnems();
+    private List<String> variables = compileTextSingleton.getVariables();
     private String shift;
     private int i;
 
@@ -75,7 +76,8 @@ public class CreateObjectiveCodeSingleton{
         String opd2mod00 = findInMatrix(Store.getMod00(), operand_2);
         String opd1mod11 = findInMatrix(Store.getMod11(), operand_1);
         String opd2mod11 = findInMatrix(Store.getMod11(), operand_2);
-
+        String db = Store.getValFromList(List.of(Store.getSpecWordToVar()), "DB");
+        String dw = Store.getValFromList(List.of(Store.getSpecWordToVar()), "DW");
 
         if(!opd1mod11.equalsIgnoreCase("")){
             MOD = "11";

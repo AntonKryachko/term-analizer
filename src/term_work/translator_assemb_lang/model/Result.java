@@ -37,13 +37,13 @@ public class Result {
         this.progCode.set(progCode);
     }
 
-    Result(){
+    public Result(){
         this.adress = new SimpleStringProperty("");
         this.objectCode = new SimpleStringProperty("");
         this.progCode = new SimpleStringProperty("");
     }
 
-    Result(String adress, String objectCode,String progCode){
+    public Result(String adress, String objectCode,String progCode){
         this.adress = new SimpleStringProperty(adress);
         this.objectCode = new SimpleStringProperty(objectCode);
         this.progCode = new SimpleStringProperty(progCode);
