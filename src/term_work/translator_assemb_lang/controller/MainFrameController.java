@@ -6,8 +6,6 @@ import javafx.stage.FileChooser;
 import term_work.translator_assemb_lang.Main;
 import term_work.translator_assemb_lang.model.AlertData;
 import term_work.translator_assemb_lang.model.CompileTextSingleton;
-import term_work.translator_assemb_lang.model.CreateObjectiveCodeSingleton;
-import term_work.translator_assemb_lang.model.Store;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,7 +19,6 @@ public class MainFrameController {
     private TextArea compile_text;
     private Main main;
     private CompileTextSingleton text = CompileTextSingleton.getInstance();
-    private CreateObjectiveCodeSingleton code = CreateObjectiveCodeSingleton.getInstance();
 
     public void setMain(Main main){
         this.main = main;
@@ -42,9 +39,8 @@ public class MainFrameController {
         trimCompile_text();
         if(!compile_text.getText().equalsIgnoreCase("")){
             text.setCompileText(compile_text.getText(),true);
-            code.setShift(Store.getValFromList(text.getSpecialWords(), "ORG"));
-            code.perfWithMnemlines();
             main.compilingFrame();
+            text.clear();
         }else {
             new AlertData(
                     main.getPrimaryStage(),
