@@ -2,24 +2,18 @@ package term_work.translator_assemb_lang;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import term_work.translator_assemb_lang.controller.AboutLayerController;
 import term_work.translator_assemb_lang.controller.CompilingFrameController;
 import term_work.translator_assemb_lang.controller.MainFrameController;
 import term_work.translator_assemb_lang.controller.RootLayerController;
-import term_work.translator_assemb_lang.model.CompileTextSingleton;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.prefs.Preferences;
 
 public class Main extends Application {

@@ -3,13 +3,13 @@ package term_work.translator_assemb_lang.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import term_work.translator_assemb_lang.Main;
 import term_work.translator_assemb_lang.model.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class CompilingFrameController {
@@ -36,7 +36,7 @@ public class CompilingFrameController {
 
 
 
-    public void perfWithMnemlines(){
+    private void perfWithMnemlines(){
         for (LineWithMnem line : lineWithMnems) {
             formObjCode(line);
         }
@@ -83,8 +83,8 @@ public class CompilingFrameController {
         String opd2mod00 = findInMatrix(Store.getMod00(), operand_2);
         String opd1mod11 = findInMatrix(Store.getMod11(), operand_1);
         String opd2mod11 = findInMatrix(Store.getMod11(), operand_2);
-        String db = Store.getValFromList(List.of(Store.getSpecWordToVar()), "DB");
-        String dw = Store.getValFromList(List.of(Store.getSpecWordToVar()), "DW");
+        String db = Store.getValFromList(Arrays.asList(Store.getSpecWordToVar()), "DB");
+        String dw = Store.getValFromList(Arrays.asList(Store.getSpecWordToVar()), "DW");
 
 
 
@@ -128,12 +128,22 @@ public class CompilingFrameController {
             }
         }
 
-        if ((W1.equals(W2) || (W2.equals(W1))) && !W1.equals("")){
+        if (W1.equals(W2) & !W1.equals("")){
             W = W1;
         }else if(W1.equals("")){
             W = W2;
-        }else W = W1;
-
+        }else if(W2.equals("")){
+            W = W1;
+        }else {
+            new AlertData(
+                    stage,
+                    "Ошибка",
+                    "Неверная длина операнда",
+                    "Иземените длину операнда в операции \n" +
+                            operator + " " + operand_1 + ", " + operand_2 ,
+                    "ERROR"
+            );
+        }
         String s = "";
         if(DATA_LOW.equals("")){
             switch (operator){
@@ -229,7 +239,7 @@ public class CompilingFrameController {
                     stage,
                     "Много плюсов",
                     "Не предусмотренная ошибка",
-                    "Данный язык не предназначен для такого количетсва плюсов в строке" + i,
+                    "Данный язык не предназначен для такого количетсва плюсов в строке " + i,
                     "ERROR"
             );
         }
@@ -291,7 +301,7 @@ public class CompilingFrameController {
         }catch (IndexOutOfBoundsException e){/*NOP*/}
         return sb.toString();
     }
-    public void setShift(String shift) {
+    private void setShift(String shift) {
         if(shift == null){
             this.shift = "0";
         }else {
@@ -318,6 +328,7 @@ public class CompilingFrameController {
         int i = 0;
         for (String s:specSymbols) {
                 if(s.contains("SEGMENT")){
+//                    nameStack.push(s.substring(0,s.indexOf("SEGMENT")));
                     i++;
                 }
                 if(s.contains("ASSUME")){
@@ -336,7 +347,6 @@ public class CompilingFrameController {
                     i++;
                 }
         }
-        System.out.println(i);
         if(i < Store.getSpec().length){
             new AlertData(
                     stage,

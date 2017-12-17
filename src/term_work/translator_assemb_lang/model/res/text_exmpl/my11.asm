@@ -11,7 +11,7 @@ ns segment
     mov bh, 5
     mov ax, 5
     mov al, 5
-    mov ax, [bx] + [si]
+    mov ax, [bx] + [si] +
     mov ah, [bx] + [si]
     mov bx, [bx] + [di]
     mov bh, [bx] + [di]

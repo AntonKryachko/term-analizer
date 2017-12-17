@@ -24,8 +24,6 @@ public class Store {
         return doings;
     }
 
-    public static int _16_ = 16;
-    public static int _8_ = 16;
     private static String[][] mod00 = {
             {"   ", "00"},
             {"000", "[BX]+[SI]"},
@@ -76,9 +74,9 @@ public class Store {
         return specWordToVar;
     }
     public static String binToHex(String bin){
+        if(bin == null) return null;
         StringBuilder sb = new StringBuilder();
-        char[] c = bin.toCharArray();
-        for (int i = 0; i < c.length; i+=4) {
+        for (int i = 0; i < bin.toCharArray().length; i+=4) {
             sb.append(Integer.toHexString(Integer.parseInt(bin.substring(i, i + 4), 2)));
         }
         return sb.toString();

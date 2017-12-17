@@ -155,7 +155,7 @@ public class CompileTextSingleton {
         Pattern pattern2 = Pattern.compile(Store.getSpecialWordRegExe());
         Pattern pattern3 = Pattern.compile(Store.getVariablesRegExe());
         for (String el: list) {
-            if(!el.equalsIgnoreCase("END")){
+            if(!el.contains("END") && el.contains("END")){
                 if(pattern1.matcher(el).find()){
                     mnemonicList.add(el);
                 }else if(pattern2.matcher(el).find()){
@@ -178,7 +178,6 @@ public class CompileTextSingleton {
         });
         return list;
     }
-
     public List<LineWithMnem> getLineWithMnems() {
         return lineWithMnems;
     }
